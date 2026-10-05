@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1565c0, #1976d2 60%, #6c63ff);
+}
+
+.tarjeta-salida {
+    background: white;
+    border-radius: 16px;
+    padding: 50px 45px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .25);
+}
+
+.icono-salida {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-salida h1 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.tarjeta-salida p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.redireccion {
+    margin-top: 15px;
+    color: #888;
+    font-size: 13px;
+}
+
+#contador {
+    font-weight: bold;
+    color: #1976d2;
+}
+
+.acciones-salida {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.boton-primario,
+.boton-secundario {
+    display: block;
+    padding: 13px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton-primario {
+    background: #1976d2;
+    color: white;
+}
+
+.boton-primario:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    background: #f1f4f9;
+    color: #555;
+}
+
+.boton-secundario:hover {
+    background: #e3e8f0;
+}

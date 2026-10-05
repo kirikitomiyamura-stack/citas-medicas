@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f4f6f9;
+}
+
+/* =========================
+   MENÚ LATERAL
+========================= */
+
+.menu {
+    width: 250px;
+    height: 100vh;
+    background: #1565c0;
+    color: white;
+    padding: 25px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.menu h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+ .menu li:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.12);
+}
+.menu li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 0;
+    height: 3px;
+    background: white;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #6c63ff;
+}
+
+.menu li:hover::after {
+    width: 80%;
+}
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 40px;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+    margin-bottom: 40px;
+}
+
+.encabezado h1 {
+    font-size: 38px;
+    color: #1976d2;
+}
+
+.encabezado p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+.encabezado span {
+    display: block;
+    margin-top: 10px;
+    color: gray;
+}
+
+
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+}
+
+.tarjeta h3 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.tarjeta p {
+    font-size: 40px;
+    font-weight: bold;
+    color: #1976d2;
+}
+
+
+.pacientes {
+    border-left: 8px solid #2196F3;
+}
+
+.medicos {
+    border-left: 8px solid #4CAF50;
+}
+
+.citas {
+    border-left: 8px solid #FF9800;
+}
+
+.consultorios {
+    border-left: 8px solid #9C27B0;
+}
+
+.menu li.activo {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0px 0 0 white;
+}
+.menu li.activo::after {
+    width: 80%;
+}
+.menu ul li a {
+    display: block;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.menu li a:hover {
+    color: white;
+}
+/* =========================
+   TARJETAS: ÍCONOS
+========================= */
+
+.tarjeta-icono {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ACCESOS RÁPIDOS
+========================= */
+
+.accesos-rapidos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.acceso {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 14.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    transition: 0.25s;
+}
+
+.acceso:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .14);
+    color: #1976d2;
+}
+
+.acceso-icono {
+    display: block;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   PRÓXIMAS CITAS
+========================= */
+
+.proximas-citas {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .10);
+}
+
+.proximas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.proximas-header h2 {
+    font-size: 20px;
+    color: #172033;
+}
+
+.proximas-header a {
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.proximas-header a:hover {
+    text-decoration: underline;
+}
+
+.lista-citas {
+    list-style: none;
+}
+
+.lista-citas li {
+    display: grid;
+    grid-template-columns: 90px 1fr 1fr 110px;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.lista-citas li:last-child {
+    border-bottom: none;
+}
+
+.cita-hora {
+    font-weight: bold;
+    color: #1976d2;
+}
+
+.cita-paciente {
+    color: #333;
+    font-weight: 600;
+}
+
+.cita-medico {
+    color: #777;
+    font-size: 14px;
+}
+
+.cita-estado {
+    text-align: center;
+    font-size: 12.5px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.cita-estado.confirmada {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.cita-estado.pendiente {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+
+/* =========================
+   RESPONSIVE DASHBOARD
+========================= */
+
+@media (max-width: 900px) {
+
+    .accesos-rapidos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lista-citas li {
+        grid-template-columns: 70px 1fr;
+        row-gap: 6px;
+    }
+
+    .cita-medico,
+    .cita-estado {
+        grid-column: 2;
+    }
+
+}

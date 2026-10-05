@@ -1,0 +1,130 @@
+.barra-tratamientos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.barra-tratamientos input {
+    width: 350px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.barra-tratamientos input:focus {
+    border-color: #1976d2;
+}
+
+.btn-nuevo {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #1976d2;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-nuevo:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   GRID DE TRATAMIENTOS
+========================= */
+
+.grid-tratamientos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-tratamiento {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .10);
+    text-align: left;
+    transition: 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta-tratamiento::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #1976d2, #6c63ff);
+}
+
+.tarjeta-tratamiento:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .15);
+}
+
+.icono-tratamiento {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-tratamiento h3 {
+    color: #333;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.especialidad-tratamiento {
+    color: #1976d2;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.descripcion-tratamiento {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+    min-height: 40px;
+}
+
+.pie-tratamiento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+
+.duracion {
+    color: #777;
+    font-size: 13px;
+}
+
+.precio {
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.sin-resultados {
+    text-align: center;
+    color: #888;
+    margin-top: 30px;
+    font-size: 15px;
+}

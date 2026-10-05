@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Usuarios - CitaFácil</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/usuarios.css">
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <h2>CITAFÁCIL</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="pacientes.html">Pacientes</a></li>
+            <li><a href="medicos.html">Médicos</a></li>
+            <li><a href="consultorios.html">Consultorios</a></li>
+            <li><a href="citas.html">Citas</a></li>
+            <li><a href="tratamientos.html">Tratamientos</a></li>
+            <li class="activo">Usuarios</li>
+            <li><a href="cerrarsesion.html">Cerrar Sesion</a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="contenido">
+
+        <div class="encabezado">
+            <h1>Usuarios</h1>
+            <p>Cuentas con acceso al sistema y sus permisos</p>
+        </div>
+
+
+        <div class="barra-usuarios">
+
+            <input type="text" id="buscarUsuario" placeholder="🔍 Buscar por nombre, correo o rol...">
+
+            <button class="btn-nuevo">+ Registrar usuario</button>
+
+        </div>
+
+
+        <div class="tabla-usuarios">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="cuerpoTablaUsuarios">
+
+                    <tr>
+                        <td>
+                            <div class="usuario-info">
+                                <span class="avatar avatar-admin">LT</span>
+                                Laura Torres
+                            </div>
+                        </td>
+                        <td>laura.torres@citafacil.co</td>
+                        <td><span class="rol rol-admin">Administrador</span></td>
+                        <td>
+                            <button class="toggle-estado activo" data-activo="true">Activo</button>
+                        </td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="usuario-info">
+                                <span class="avatar avatar-recepcion">CM</span>
+                                Carlos Medina
+                            </div>
+                        </td>
+                        <td>carlos.medina@citafacil.co</td>
+                        <td><span class="rol rol-recepcion">Recepcionista</span></td>
+                        <td>
+                            <button class="toggle-estado activo" data-activo="true">Activo</button>
+                        </td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="usuario-info">
+                                <span class="avatar avatar-medico">JP</span>
+                                Dr. Juan Pérez
+                            </div>
+                        </td>
+                        <td>juan.perez@citafacil.co</td>
+                        <td><span class="rol rol-medico">Médico</span></td>
+                        <td>
+                            <button class="toggle-estado activo" data-activo="true">Activo</button>
+                        </td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="usuario-info">
+                                <span class="avatar avatar-medico">MG</span>
+                                Dra. María Gómez
+                            </div>
+                        </td>
+                        <td>maria.gomez@citafacil.co</td>
+                        <td><span class="rol rol-medico">Médico</span></td>
+                        <td>
+                            <button class="toggle-estado inactivo" data-activo="false">Inactivo</button>
+                        </td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <p class="sin-resultados" id="sinResultadosUsuarios" style="display:none;">
+                No se encontraron usuarios con ese criterio.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="../js/usuarios.js"></script>
+
+</body>
+</html>

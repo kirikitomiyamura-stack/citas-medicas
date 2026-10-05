@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tratamientos - CitaFácil</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/tratamientos.css">
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <h2>CITAFÁCIL</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="pacientes.html">Pacientes</a></li>
+            <li><a href="medicos.html">Médicos</a></li>
+            <li><a href="consultorios.html">Consultorios</a></li>
+            <li><a href="citas.html">Citas</a></li>
+            <li class="activo">Tratamientos</li>
+            <li><a href="usuarios.html">Usuarios</a></li>
+            <li><a href="cerrarsesion.html">Cerrar Sesion</a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="contenido">
+
+        <div class="encabezado">
+            <h1>Tratamientos</h1>
+            <p>Catálogo de servicios y procedimientos disponibles</p>
+        </div>
+
+
+        <div class="barra-tratamientos">
+
+            <input type="text" id="buscarTratamiento" placeholder="🔍 Buscar tratamiento o especialidad...">
+
+            <button class="btn-nuevo">+ Registrar tratamiento</button>
+
+        </div>
+
+
+        <div class="grid-tratamientos" id="gridTratamientos">
+
+            <div class="tarjeta-tratamiento">
+                <div class="icono-tratamiento"></div>
+                <h3>Consulta general</h3>
+                <p class="especialidad-tratamiento">Medicina general</p>
+                <p class="descripcion-tratamiento">Valoración inicial del estado de salud del paciente.</p>
+                <div class="pie-tratamiento">
+                    <span class="duracion">30 min</span>
+                    <span class="precio">$45.000</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-tratamiento">
+                <div class="icono-tratamiento"></div>
+                <h3>Control cardiológico</h3>
+                <p class="especialidad-tratamiento">Cardiología</p>
+                <p class="descripcion-tratamiento">Evaluación de presión arterial y función cardíaca.</p>
+                <div class="pie-tratamiento">
+                    <span class="duracion"> 40 min</span>
+                    <span class="precio">$90.000</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-tratamiento">
+                <div class="icono-tratamiento"></div>
+                <h3>Vacunación</h3>
+                <p class="especialidad-tratamiento">Enfermería</p>
+                <p class="descripcion-tratamiento">Aplicación de esquema de vacunación según edad.</p>
+                <div class="pie-tratamiento">
+                    <span class="duracion"> 15 min</span>
+                    <span class="precio">$35.000</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-tratamiento">
+                <div class="icono-tratamiento"></div>
+                <h3>Terapia física</h3>
+                <p class="especialidad-tratamiento">Fisioterapia</p>
+                <p class="descripcion-tratamiento">Sesión de rehabilitación para lesiones musculares.</p>
+                <div class="pie-tratamiento">
+                    <span class="duracion">50 min</span>
+                    <span class="precio">$70.000</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-tratamiento">
+                <div class="icono-tratamiento"></div>
+                <h3>Valoración pediátrica</h3>
+                <p class="especialidad-tratamiento">Pediatría</p>
+                <p class="descripcion-tratamiento">Control de crecimiento y desarrollo infantil.</p>
+                <div class="pie-tratamiento">
+                    <span class="duracion"> 30 min</span>
+                    <span class="precio">$55.000</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-tratamiento">
+                <div class="icono-tratamiento"></div>
+                <h3>Exámenes de laboratorio</h3>
+                <p class="especialidad-tratamiento">Laboratorio clínico</p>
+                <p class="descripcion-tratamiento">Toma de muestras para análisis clínicos generales.</p>
+                <div class="pie-tratamiento">
+                    <span class="duracion"> 20 min</span>
+                    <span class="precio">$60.000</span>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="sin-resultados" id="sinResultadosTratamientos" style="display:none;">
+            No se encontraron tratamientos con ese criterio.
+        </p>
+
+    </div>
+
+    <script src="../js/tratamientos.js"></script>
+
+</body>
+</html>

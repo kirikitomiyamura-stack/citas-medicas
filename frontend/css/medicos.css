@@ -1,0 +1,190 @@
+/* =========================
+   BARRA DE ACCIONES
+========================= */
+
+.barra-medicos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.barra-medicos input {
+    flex: 1;
+    min-width: 220px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.barra-medicos input:focus {
+    border-color: #1976d2;
+}
+
+.btn-registrar {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #4CAF50;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-registrar:hover {
+    background: #43a047;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FILTRO POR ESPECIALIDAD
+========================= */
+
+.filtros-especialidad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filtro {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.filtro:hover {
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.filtro.activo {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* =========================
+   GRID DE PERFILES
+========================= */
+
+.grid-medicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.medico-card {
+    background: white;
+    border-radius: 14px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .10);
+    transition: 0.25s;
+}
+
+.medico-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .15);
+}
+
+.foto-medico {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e8f5e9;
+    margin-bottom: 14px;
+}
+
+.medico-card h3 {
+    color: #333;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.medico-card .especialidad {
+    color: #4CAF50;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.disponibilidad {
+    display: inline-block;
+    font-size: 12.5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.disponibilidad.disponible {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.disponibilidad.no-disponible {
+    background: #f1f1f1;
+    color: #888;
+}
+
+.card-acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.card-acciones .editar,
+.card-acciones .eliminar {
+    flex: 1;
+    border: none;
+    padding: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.card-acciones .editar {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.card-acciones .editar:hover {
+    background: #bbdefb;
+}
+
+.card-acciones .eliminar {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.card-acciones .eliminar:hover {
+    background: #ffcdd2;
+}
+
+
+/* =========================
+   ESTADO VACÍO
+========================= */
+
+.sin-resultados {
+    display: none;
+    text-align: center;
+    color: #888;
+    margin-top: 30px;
+    font-size: 16px;
+}
