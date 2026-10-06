@@ -1,322 +1,424 @@
+/* =========================================
+   Colores que uso en toda la página:
+   azul oscuro  #1565c0   (menú, botones oscuros)
+   azul         #1976d2   (botones, elegido)
+   azul claro   #e3f2fd   (fondos suaves)
+   gris fondo   #f4f6f9
+   ========================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lexend", Arial, sans-serif;
 }
 
 body {
     display: flex;
     background: #f4f6f9;
+    color: #17283b;
 }
 
-/* =========================
-   MENÚ LATERAL
-========================= */
+a {
+    text-decoration: none;
+}
+
+
+/* ========== MENÚ LATERAL ========== */
 
 .menu {
-    width: 250px;
+    width: 248px;
     height: 100vh;
-    background: #1565c0;
-    color: white;
-    padding: 25px 15px;
-    position: fixed;
+    position: fixed;       /* se queda quieto al hacer scroll */
     left: 0;
     top: 0;
-}
-
-.menu h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.menu ul {
-    list-style: none;
-}
-
-.menu li {
-    position: relative;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.menu li a {
-    display: block;
-    text-decoration: none;
+    background: #1565c0;
     color: white;
-    font-size: 16px;
-}
- .menu li:hover {
-    transform: translateX(5px);
-    background: rgba(255, 255, 255, 0.12);
-}
-.menu li::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-    width: 0;
-    height: 3px;
-    background: white;
-    border-radius: 10px;
-    transition: 0.3s;
-    box-shadow: 0 0 10px #6c63ff;
+    padding: 24px 14px;
+    display: flex;
+    flex-direction: column;
 }
 
-.menu li:hover::after {
-    width: 80%;
+.logo {
+    font-size: 21px;
+    padding: 0 14px 20px 14px;
 }
-/* =========================
-   CONTENIDO
-========================= */
+
+.menu nav {
+    flex: 1;               /* ocupa el espacio y empuja "Cerrar sesión" abajo */
+}
+
+.grupo {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a9cdf5;
+    padding: 16px 14px 6px 14px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    color: #e6f1fd;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+/* la opción donde estamos */
+.menu a.activo {
+    background: white;
+    color: #1565c0;
+    font-weight: 600;
+}
+
+/* los iconos son SVG: se pintan con el color del texto */
+.menu svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
+
+.salir {
+    background: rgba(0, 0, 0, 0.18);
+}
+
+
+/* ========== CONTENIDO ========== */
 
 .contenido {
-    margin-left: 250px;
-    width: calc(100% - 250px);
-    padding: 40px;
+    margin-left: 248px;               /* para no quedar debajo del menú */
+    width: calc(100% - 248px);
+    padding: 32px 40px 48px 40px;
 }
 
-
-/* =========================
-   ENCABEZADO
-========================= */
-
-.encabezado {
-    margin-bottom: 40px;
+.ruta {
+    font-size: 14px;
+    color: #5b6776;
 }
 
-.encabezado h1 {
-    font-size: 38px;
-    color: #1976d2;
+.contenido h1 {
+    font-size: 30px;
+    margin: 6px 0 22px 0;
 }
 
-.encabezado p {
-    margin-top: 10px;
-    font-size: 20px;
-    color: #555;
-}
-
-.encabezado span {
-    display: block;
-    margin-top: 10px;
-    color: gray;
-}
-
-
-
-.tarjetas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-.tarjeta {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
-}
-
-.tarjeta h3 {
-    margin-bottom: 15px;
-    color: #444;
-}
-
-.tarjeta p {
-    font-size: 40px;
-    font-weight: bold;
-    color: #1976d2;
-}
-
-
-.pacientes {
-    border-left: 8px solid #2196F3;
-}
-
-.medicos {
-    border-left: 8px solid #4CAF50;
-}
-
-.citas {
-    border-left: 8px solid #FF9800;
-}
-
-.consultorios {
-    border-left: 8px solid #9C27B0;
-}
-
-.menu li.activo {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: inset 0px 0 0 white;
-}
-.menu li.activo::after {
-    width: 80%;
-}
-.menu ul li a {
-    display: block;
-    padding: 14px 12px;
+.contenido h3 {
     font-size: 16px;
-    border-radius: 8px;
+    margin: 22px 0 12px 0;
 }
 
-.menu li a:hover {
-    color: white;
+.contenido h3 small {
+    font-weight: 400;
+    font-size: 13px;
+    color: #5b6776;
 }
-/* =========================
-   TARJETAS: ÍCONOS
-========================= */
 
-.tarjeta-icono {
-    display: block;
-    font-size: 28px;
+
+/* ========== PASOS ========== */
+
+.pasos {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
     margin-bottom: 10px;
 }
 
+.paso {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #5b6776;
+}
 
-/* =========================
-   ACCESOS RÁPIDOS
-========================= */
+/* el circulito con el número */
+.paso span {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #dfe5ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
 
-.accesos-rapidos {
+.paso.actual {
+    color: #0d47a1;
+    font-weight: 600;
+}
+
+.paso.actual span {
+    background: #1976d2;
+    color: white;
+}
+
+.paso.hecho span {
+    background: #1565c0;
+    color: white;
+}
+
+
+/* ========== DOS COLUMNAS ========== */
+
+.columnas {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+select {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px;
+    border: 1.5px solid #b9cde6;
+    border-radius: 10px;
+    background: white;
+    font-size: 15px;
+}
+
+.ayuda {
+    color: #5b6776;
+    font-size: 14px;
+}
+
+/* botones redondos (especialidades y días) */
+.opciones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.opciones button {
+    padding: 11px 18px;
+    border: 1.5px solid #b9cde6;
+    border-radius: 30px;
+    background: white;
+    color: #1f3a5a;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.opciones button:hover {
+    background: #e3f2fd;
+}
+
+.opciones button.elegido {
+    background: #1976d2;
+    border-color: #1976d2;
+    color: white;
+}
+
+/* tarjeta de cada médico */
+.medico {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    background: white;
+    border: 1.5px solid #dfe5ec;
+    border-radius: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.medico:hover {
+    border-color: #90b8e8;
+}
+
+.medico.elegido {
+    border: 2.5px solid #1976d2;
+}
+
+.iniciales {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #e3f2fd;
+    color: #1565c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.medico b {
+    display: block;
+    font-weight: 600;
+}
+
+.medico small {
+    color: #4d5c6b;
+}
+
+/* cuadrícula de horas */
+.horas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    margin-bottom: 30px;
+    gap: 10px;
 }
 
-.acceso {
+.horas button {
+    min-height: 48px;
+    border: 1.5px solid #90b8e8;
+    border-radius: 10px;
     background: white;
-    border-radius: 12px;
-    padding: 18px;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 14.5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
-    transition: 0.25s;
+    color: #0d47a1;
+    font-size: 15px;
+    cursor: pointer;
 }
 
-.acceso:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .14);
-    color: #1976d2;
+.horas button:hover {
+    background: #e3f2fd;
 }
 
-.acceso-icono {
-    display: block;
-    font-size: 26px;
-    margin-bottom: 8px;
+.horas button.elegido {
+    background: #1565c0;
+    border-color: #1565c0;
+    color: white;
+}
+
+.horas button.ocupada {
+    background: #eceff3;
+    border-color: #eceff3;
+    color: #6f7b89;
+    text-decoration: line-through;
+    cursor: not-allowed;
 }
 
 
-/* =========================
-   PRÓXIMAS CITAS
-========================= */
+/* ========== RESUMEN ========== */
 
-.proximas-citas {
+.resumen {
     background: white;
-    border-radius: 12px;
-    padding: 25px;
-    margin-top: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .10);
+    border-radius: 16px;
+    padding: 26px;
 }
 
-.proximas-header {
+.resumen h3 {
+    margin-top: 0;
+}
+
+.fila {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+    gap: 12px;
+    padding: 11px 0;
+    border-top: 1px solid #e3e8ef;
+    font-size: 15px;
 }
 
-.proximas-header h2 {
-    font-size: 20px;
-    color: #172033;
+.fila span {
+    color: #4d5c6b;
 }
 
-.proximas-header a {
-    color: #1976d2;
-    text-decoration: none;
-    font-size: 14px;
+.fila b {
     font-weight: 600;
+    text-align: right;
 }
 
-.proximas-header a:hover {
-    text-decoration: underline;
-}
-
-.lista-citas {
-    list-style: none;
-}
-
-.lista-citas li {
-    display: grid;
-    grid-template-columns: 90px 1fr 1fr 110px;
-    align-items: center;
-    gap: 15px;
-    padding: 14px 10px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.lista-citas li:last-child {
-    border-bottom: none;
-}
-
-.cita-hora {
-    font-weight: bold;
-    color: #1976d2;
-}
-
-.cita-paciente {
-    color: #333;
-    font-weight: 600;
-}
-
-.cita-medico {
-    color: #777;
+#mensaje {
+    margin-top: 14px;
     font-size: 14px;
 }
 
-.cita-estado {
-    text-align: center;
-    font-size: 12.5px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 20px;
+#mensaje.error {
+    color: #c62828;
 }
 
-.cita-estado.confirmada {
-    background: #e8f5e9;
+#mensaje.ok {
     color: #2e7d32;
+    font-weight: 600;
 }
 
-.cita-estado.pendiente {
-    background: #fff3e0;
-    color: #ef6c00;
+.resumen button {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-azul {
+    background: #1976d2;
+    border: none;
+    color: white;
+}
+
+.btn-azul:hover {
+    background: #1565c0;
+}
+
+.btn-borde {
+    background: white;
+    border: 1.5px solid #90b8e8;
+    color: #1565c0;
+}
+
+.nota {
+    display: block;
+    margin-top: 14px;
+    color: #5b6776;
+    font-size: 12px;
 }
 
 
-/* =========================
-   RESPONSIVE DASHBOARD
-========================= */
+/* ========== PANTALLAS PEQUEÑAS ========== */
 
 @media (max-width: 900px) {
 
-    .accesos-rapidos {
-        grid-template-columns: repeat(2, 1fr);
+    /* el menú pasa abajo, solo con iconos */
+    .menu {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 6px;
+        z-index: 10;
     }
 
-    .lista-citas li {
-        grid-template-columns: 70px 1fr;
-        row-gap: 6px;
+    .logo,
+    .grupo,
+    .menu a span,
+    .extra {
+        display: none;
     }
 
-    .cita-medico,
-    .cita-estado {
-        grid-column: 2;
+    .menu nav {
+        display: flex;
+        justify-content: space-around;
     }
 
+    .menu a {
+        margin: 0;
+        padding: 12px;
+    }
+
+    .contenido {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 16px 90px 16px;
+    }
+
+    .columnas {
+        grid-template-columns: 1fr;
+    }
 }

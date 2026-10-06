@@ -3,155 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - CitaFácil</title>
+    <title>Nueva cita | CitaFácil</title>
 
-    <link rel="stylesheet" href="../css/dashboard.css">
-
+    <!-- Tipo de letra de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/citas.css">
 </head>
-
 <body>
 
-    <div class="menu">
+    <!-- ========== MENÚ LATERAL ========== -->
+    <aside class="menu">
 
-        <h2>CITAFÁCIL</h2>
+        <h2 class="logo">CitaFácil</h2>
 
-        <ul>
-            <li class="activo">Inicio</li>
+        <nav>
+            <p class="grupo">Principal</p>
 
-            <li><a href="pacientes.html">Pacientes</a></li>
-
-            <li><a href="medicos.html">Médicos</a></li>
-
-            <li><a href="consultorios.html">Consultorios</a></li>
-
-            <li><a href="citas.html">Citas</a></li>
-
-            <li><a href="tratamientos.html">Tratamientos</a></li>
-
-            <li><a href="usuarios.html">Usuarios</a></li>
-
-            <li><a href="cerrarsesion.html">Cerrar Sesion</a></li>
-        </ul>
-
-    </div>
-
-
-    <div class="contenido">
-
-        <div class="encabezado">
-
-            <h1 id="saludo">Bienvenido</h1>
-
-            <p>Bienvenido de Nuevo </p>
-
-            <span id="fechaActual"></span>
-
-        </div>
-
-
-        <!-- ACCESOS RÁPIDOS -->
-        <div class="accesos-rapidos">
-
-            <a href="pacientes.html" class="acceso">
-                <span class="acceso-icono"></span>
-                Nuevo paciente
+            <a href="dashboard.html">
+                <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+                <span>Inicio</span>
             </a>
 
-            <a href="medicos.html" class="acceso">
-                <span class="acceso-icono"></span>
-                Nuevo médico
+            <a href="citas.html" class="activo">
+                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+                <span>Citas</span>
             </a>
 
-            <a href="citas.html" class="acceso">
-                <span class="acceso-icono"></span>
-                Nueva cita
+            <p class="grupo">Gestión</p>
+
+            <a href="pacientes.html">
+                <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6"/><path d="M16 4.5a3.5 3.5 0 010 7M18 14c2.2.6 3.5 2.6 3.5 6"/></svg>
+                <span>Pacientes</span>
             </a>
 
-            <a href="consultorios.html" class="acceso">
-                <span class="acceso-icono"></span>
-                Nuevo consultorio
+            <a href="medicos.html">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg>
+                <span>Médicos</span>
             </a>
 
+            <a href="consultorios.html" class="extra">
+                <svg viewBox="0 0 24 24"><path d="M5 21V4a1 1 0 011-1h12a1 1 0 011 1v17M3 21h18"/><circle cx="15" cy="12" r=".8"/></svg>
+                <span>Consultorios</span>
+            </a>
+
+            <a href="tratamientos.html" class="extra">
+                <svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v3H9zM9 12h6M9 16h4"/></svg>
+                <span>Tratamientos</span>
+            </a>
+
+            <p class="grupo">Sistema</p>
+
+            <a href="usuarios.html" class="extra">
+                <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+                <span>Usuarios</span>
+            </a>
+        </nav>
+
+        <a href="cerrarsesion.html" class="salir">
+            <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+            <span>Cerrar sesión</span>
+        </a>
+
+    </aside>
+
+
+    <!-- ========== CONTENIDO ========== -->
+    <main class="contenido">
+
+        <p class="ruta">Citas / Nueva cita</p>
+        <h1>Nueva cita</h1>
+
+        <!-- Pasos de arriba: el JS les cambia la clase -->
+        <div class="pasos">
+            <div class="paso" id="paso1"><span>1</span> Especialidad</div>
+            <div class="paso" id="paso2"><span>2</span> Médico y hora</div>
+            <div class="paso" id="paso3"><span>3</span> Confirmar</div>
         </div>
 
+        <div class="columnas">
 
-        <!-- TARJETAS DE RESUMEN -->
-        <div class="tarjetas">
+            <!-- Columna izquierda: el formulario -->
+            <section class="formulario">
 
-            <div class="tarjeta pacientes">
-                <span class="tarjeta-icono"></span>
-                <h3>Pacientes</h3>
-                <p id="totalPacientes">0</p>
-            </div>
+                <h3>Paciente</h3>
+                <select id="paciente"></select>
 
-            <div class="tarjeta medicos">
-                <span class="tarjeta-icono"></span>
-                <h3>Médicos</h3>
-                <p id="totalMedicos">0</p>
-            </div>
+                <h3>Especialidad</h3>
+                <div class="opciones" id="listaEspecialidades"></div>
 
-            <div class="tarjeta citas">
-                <span class="tarjeta-icono"></span>
-                <h3>Citas</h3>
-                <p id="totalCitas">0</p>
-            </div>
+                <h3>Médico</h3>
+                <div id="listaMedicos">
+                    <p class="ayuda">Primero elige una especialidad.</p>
+                </div>
 
-            <div class="tarjeta consultorios">
-                <span class="tarjeta-icono"></span>
-                <h3>Consultorios</h3>
-                <p id="totalConsultorios">0</p>
-            </div>
+                <h3>Día</h3>
+                <div class="opciones" id="listaDias"></div>
 
-        </div>
+                <h3>Hora <small>(las tachadas ya están ocupadas)</small></h3>
+                <div class="horas" id="listaHoras">
+                    <p class="ayuda">Primero elige un médico.</p>
+                </div>
 
+            </section>
 
-        <!-- PRÓXIMAS CITAS -->
-        <div class="proximas-citas">
+            <!-- Columna derecha: el resumen -->
+            <aside class="resumen">
+                <h3>Resumen de la cita</h3>
 
-            <div class="proximas-header">
-                <h2>Próximas citas</h2>
-                <a href="citas.html">Ver todas →</a>
-            </div>
+                <div class="fila"><span>Paciente</span><b id="resPaciente">—</b></div>
+                <div class="fila"><span>Especialidad</span><b id="resEspecialidad">—</b></div>
+                <div class="fila"><span>Médico</span><b id="resMedico">—</b></div>
+                <div class="fila"><span>Fecha</span><b id="resFecha">—</b></div>
+                <div class="fila"><span>Hora</span><b id="resHora">—</b></div>
+                <div class="fila"><span>Consultorio</span><b id="resConsultorio">—</b></div>
 
-            <ul class="lista-citas">
+                <p id="mensaje"></p>
 
-                <li>
-                    <span class="cita-hora">09:00 AM</span>
-                    <span class="cita-paciente">Juan Pérez</span>
-                    <span class="cita-medico">Dr. Carlos Ruiz · Dermatología</span>
-                    <span class="cita-estado confirmada">Confirmada</span>
-                </li>
+                <button type="button" id="btnConfirmar" class="btn-azul">Confirmar cita</button>
+                <button type="button" id="btnCancelar" class="btn-borde">Cancelar</button>
 
-                <li>
-                    <span class="cita-hora">10:30 AM</span>
-                    <span class="cita-paciente">María Gómez</span>
-                    <span class="cita-medico">Dra. Ana Torres · Psicología</span>
-                    <span class="cita-estado confirmada">Confirmada</span>
-                </li>
-
-                <li>
-                    <span class="cita-hora">11:15 AM</span>
-                    <span class="cita-paciente">Luis Ramírez</span>
-                    <span class="cita-medico">Dr. Juan Pérez · Cardiología</span>
-                    <span class="cita-estado pendiente">Pendiente</span>
-                </li>
-
-                <li>
-                    <span class="cita-hora">02:00 PM</span>
-                    <span class="cita-paciente">Sofía Herrera</span>
-                    <span class="cita-medico">Dra. María Gómez · Pediatría</span>
-                    <span class="cita-estado confirmada">Confirmada</span>
-                </li>
-
-            </ul>
+                <small class="nota">Los datos son de ejemplo hasta conectar con el backend.</small>
+            </aside>
 
         </div>
+    </main>
 
-    </div>
-
-
-    <script src="../js/dashboard.js"></script>
-
-
+    <script src="../js/citas.js"></script>
 </body>
 </html>
