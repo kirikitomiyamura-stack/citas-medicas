@@ -1,5 +1,5 @@
 // Trae los totales para las tarjetas de resumen
-fetch("http://localhost:3000/dashboard")
+fetch("https://citas-medicas-6l2b.onrender.com")
     .then(respuesta => respuesta.json())
     .then(datos => {
 
