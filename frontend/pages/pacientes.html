@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pacientes - CitaFácil</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pacientes.css">
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <h2>CITAFÁCIL</h2>
+
+        <ul>
+
+            <li  ><a href="dashboard.html"></a> Inicio</li>
+
+            <li class="activo"> Pacientes</li>
+
+            <li><a href="medicos.html"></a> Médicos</li>
+
+            <li> <a href="consultorios.html">Consultorios</a></li>
+
+            <li> <a href="citas.html">Citas</a></li>
+
+            <li> <a href="tratamientos.html">Tratamientos</a></li>
+
+            <li> <a href="usuarios.html">Usuarios</a></li>
+
+            <li> <a href="cerrarsesion.html">Cerrar Sesion</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="contenido">
+
+        <div class="encabezado">
+
+            <h1>Pacientes </h1>
+
+            <p>Gestión de pacientes</p>
+
+        </div>
+
+
+        <div class="barra-pacientes">
+
+            <input 
+                type="text" 
+                placeholder="🔍 Buscar paciente..."
+            >
+
+            <button>+ Registrar paciente</button>
+
+        </div>
+
+
+        <div class="tabla-pacientes">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Documento</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>123456789</td>
+                        <td>3001234567</td>
+                        <td>juan@gmail.com</td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>María Gómez</td>
+                        <td>987654321</td>
+                        <td>3109876543</td>
+                        <td>maria@gmail.com</td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

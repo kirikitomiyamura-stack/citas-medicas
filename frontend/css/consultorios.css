@@ -1,0 +1,243 @@
+/* =========================
+   CONTADORES (RESUMEN)
+========================= */
+
+.resumen-consultorios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.resumen {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .10);
+}
+
+.resumen h3 {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.resumen p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1976d2;
+}
+
+.resumen.total {
+    border-top: 5px solid #1976d2;
+}
+
+.resumen.disponibles {
+    border-top: 5px solid #2e7d32;
+}
+
+.resumen.disponibles p {
+    color: #2e7d32;
+}
+
+.resumen.ocupados {
+    border-top: 5px solid #d32f2f;
+}
+
+.resumen.ocupados p {
+    color: #d32f2f;
+}
+
+
+/* =========================
+   BARRA DE ACCIONES
+========================= */
+
+.barra-consultorios {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.barra-consultorios input {
+    flex: 1;
+    min-width: 220px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.barra-consultorios input:focus {
+    border-color: #1976d2;
+}
+
+.filtros {
+    display: flex;
+    gap: 8px;
+    background: #eef2f7;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.filtro {
+    border: none;
+    background: transparent;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.filtro:hover {
+    color: #1976d2;
+}
+
+.filtro.activo {
+    background: white;
+    color: #1976d2;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+}
+
+.btn-registrar {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #9C27B0;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-registrar:hover {
+    background: #7b1fa2;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   GRID DE TARJETAS
+========================= */
+
+.grid-consultorios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.consultorio-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .10);
+    border-left: 6px solid #9C27B0;
+    transition: 0.25s;
+}
+
+.consultorio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.numero {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+}
+
+.badge {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge.disponible {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge.ocupado {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.ubicacion {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.especialidad {
+    color: #444;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.card-acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.card-acciones .editar,
+.card-acciones .eliminar {
+    flex: 1;
+    border: none;
+    padding: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.card-acciones .editar {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.card-acciones .editar:hover {
+    background: #bbdefb;
+}
+
+.card-acciones .eliminar {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.card-acciones .eliminar:hover {
+    background: #ffcdd2;
+}
+
+
+/* =========================
+   ESTADOS VACÍOS
+========================= */
+
+.sin-resultados {
+    display: none;
+    text-align: center;
+    color: #888;
+    margin-top: 30px;
+    font-size: 16px;
+}

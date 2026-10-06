@@ -1,0 +1,121 @@
+
+
+.barra-pacientes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.barra-pacientes input {
+    width: 350px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.barra-pacientes input:focus {
+    border-color: #1976d2;
+}
+
+
+/*  BOTÓN REGISTRAR */
+
+.barra-pacientes button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #1976d2;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.barra-pacientes button:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+}
+
+
+/* TABLA*/
+
+.tabla-pacientes {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .10);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    background: #f4f6f9;
+    color: #444;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+tr:hover {
+    background: #f8fbff;
+}
+
+
+
+
+.editar,
+.eliminar {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.editar {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.editar:hover {
+    background: #bbdefb;
+}
+
+.eliminar {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.eliminar:hover {
+    background: #ffcdd2;
+}
+
+.menu li{
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+
+}
+
+.menu li a{
+
+    display: block;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+
+}

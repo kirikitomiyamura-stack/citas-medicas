@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Médicos - CitaFácil</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/medicos.css">
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <h2>CITAFÁCIL</h2>
+
+        <ul>
+
+            <li> <a href="dashboard.html">Inicio</a></li>
+
+            <li><a href="pacientes.html">Pacientes</a></li>
+
+            <li class="activo">Médicos</li>
+
+            <li><a href="consultorios.html">Consultorios</a></li>
+
+            <li> <a href="citas.html">Citas</a></li>
+
+            <li> <a href="tratamientos.html">Tratamientos</a></li>
+
+            <li> <a href="usuarios.html">Usuarios</a></li>
+
+            <li> <a href="cerrarsesion.html">Cerrar Sesion</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="contenido">
+
+        <div class="encabezado">
+
+            <h1>Médicos</h1>
+
+            <p>Gestión de médicos y sus especialidades</p>
+
+        </div>
+
+
+        <!-- BARRA DE ACCIONES -->
+        <div class="barra-medicos">
+
+            <input
+                type="text"
+                id="buscarMedico"
+                placeholder="🔍 Buscar médico..."
+            >
+
+            <button class="btn-registrar">+ Registrar médico</button>
+
+        </div>
+
+
+        <!-- FILTRO POR ESPECIALIDAD -->
+        <div class="filtros-especialidad" id="filtrosEspecialidad">
+            <button class="filtro activo" data-especialidad="todos">Todos</button>
+            <button class="filtro" data-especialidad="Cardiología">Cardiología</button>
+            <button class="filtro" data-especialidad="Pediatría">Pediatría</button>
+            <button class="filtro" data-especialidad="Dermatología">Dermatología</button>
+            <button class="filtro" data-especialidad="Psicología">Psicología</button>
+            <button class="filtro" data-especialidad="Medicina general">Medicina general</button>
+        </div>
+
+
+        <!-- GRID DE PERFILES -->
+        <div class="grid-medicos" id="gridMedicos">
+
+            <div class="medico-card" data-especialidad="Cardiología" data-disponible="true">
+                <img src="../img/medico-1.jpeg" alt="Foto Dr. Juan Pérez" class="foto-medico">
+                <h3>Dr. Juan Pérez</h3>
+                <p class="especialidad">Cardiología</p>
+                <span class="disponibilidad disponible">🟢 Disponible hoy</span>
+                <div class="card-acciones">
+                    <button class="editar">Editar</button>
+                    <button class="eliminar">Eliminar</button>
+                </div>
+            </div>
+
+            <div class="medico-card" data-especialidad="Pediatría" data-disponible="false">
+                <img src="../img/medico-2.jpeg" alt="Foto Dra. María Gómez" class="foto-medico">
+                <h3>Dra. María Gómez</h3>
+                <p class="especialidad">Pediatría</p>
+                <span class="disponibilidad no-disponible">⚪ No disponible</span>
+                <div class="card-acciones">
+                    <button class="editar">Editar</button>
+                    <button class="eliminar">Eliminar</button>
+                </div>
+            </div>
+
+            <div class="medico-card" data-especialidad="Dermatología" data-disponible="true">
+                <img src="../img/medico-3.jpeg" alt="Foto Dr. Carlos Ruiz" class="foto-medico">
+                <h3>Dr. Carlos Ruiz</h3>
+                <p class="especialidad">Dermatología</p>
+                <span class="disponibilidad disponible">🟢 Disponible hoy</span>
+                <div class="card-acciones">
+                    <button class="editar">Editar</button>
+                    <button class="eliminar">Eliminar</button>
+                </div>
+            </div>
+
+            <div class="medico-card" data-especialidad="Psicología" data-disponible="true">
+                <img src="../img/medico-4.jpeg" alt="Foto Dra. Ana Torres" class="foto-medico">
+                <h3>Dra. Ana Torres</h3>
+                <p class="especialidad">Psicología</p>
+                <span class="disponibilidad disponible">🟢 Disponible hoy</span>
+                <div class="card-acciones">
+                    <button class="editar">Editar</button>
+                    <button class="eliminar">Eliminar</button>
+                </div>
+            </div>
+
+            <div class="medico-card" data-especialidad="Medicina general" data-disponible="false">
+                <img src="../img/medico-5.jpeg" alt="Foto Dr. Luis Ramírez" class="foto-medico">
+                <h3>Dr. Luis Ramírez</h3>
+                <p class="especialidad">Medicina general</p>
+                <span class="disponibilidad no-disponible">⚪ No disponible</span>
+                <div class="card-acciones">
+                    <button class="editar">Editar</button>
+                    <button class="eliminar">Eliminar</button>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="sin-resultados" id="sinResultados">No se encontraron médicos.</p>
+
+    </div>
+
+    <script src="../js/medicos.js"></script>
+
+</body>
+
+</html>

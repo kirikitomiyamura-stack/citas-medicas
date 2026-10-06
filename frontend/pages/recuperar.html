@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar contraseña - CitaFácil</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/recuperar.css">
+
+</head>
+<body>
+
+    <div class="login">
+
+        <h1>CITAFÁCIL</h1>
+
+        <h3>Recuperar contraseña</h3>
+
+        <!-- PASO 1: pedir el correo -->
+        <div id="pasoCorreo">
+
+            <p class="instrucciones">
+                Ingresa tu correo electrónico y te enviaremos
+                un enlace para restablecer tu contraseña.
+            </p>
+
+            <input
+                type="email"
+                id="correoRecuperar"
+                placeholder="Correo electrónico">
+
+            <button id="btnEnviar">
+                Enviar enlace de recuperación
+            </button>
+
+        </div>
+
+        <!-- PASO 2: confirmación (oculto al inicio) -->
+        <div id="pasoConfirmacion" class="oculto">
+
+            <div class="icono-exito">✅</div>
+
+            <p class="instrucciones">
+                Si el correo ingresado está registrado, te llegará
+                un enlace para restablecer tu contraseña en unos minutos.
+            </p>
+
+        </div>
+
+        <a href="login.html" class="volver-login">
+            ← Volver a iniciar sesión
+        </a>
+
+    </div>
+
+    <script src="../js/recuperar.js"></script>
+
+</body>
+</html>

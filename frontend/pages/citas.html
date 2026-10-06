@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Citas - CitaFácil</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/citas.css">
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <h2>CITAFÁCIL</h2>
+
+        <ul>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="pacientes.html">Pacientes</a></li>
+            <li><a href="medicos.html">Médicos</a></li>
+            <li><a href="consultorios.html">Consultorios</a></li>
+            <li class="activo">Citas</li>
+            <li><a href="tratamientos.html">Tratamientos</a></li>
+            <li><a href="usuarios.html">Usuarios</a></li>
+            <li><a href="cerrarsesion.html">Cerrar Sesion</a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="contenido">
+
+        <div class="encabezado">
+            <h1>Citas</h1>
+            <p>Agenda y seguimiento de citas médicas</p>
+        </div>
+
+
+        <div class="resumen-citas">
+
+            <div class="mini-tarjeta hoy">
+                <span class="numero">5</span>
+                <span class="etiqueta">Citas hoy</span>
+            </div>
+
+            <div class="mini-tarjeta pendientes">
+                <span class="numero">2</span>
+                <span class="etiqueta">Pendientes</span>
+            </div>
+
+            <div class="mini-tarjeta confirmadas">
+                <span class="numero">6</span>
+                <span class="etiqueta">Confirmadas</span>
+            </div>
+
+            <div class="mini-tarjeta canceladas">
+                <span class="numero">1</span>
+                <span class="etiqueta">Canceladas</span>
+            </div>
+
+        </div>
+
+
+        <div class="barra-citas">
+
+            <input type="text" id="buscarCita" placeholder="🔍 Buscar por paciente o médico...">
+
+            <div class="filtros" id="filtrosCita">
+                <button class="filtro activo-filtro" data-estado="todas">Todas</button>
+                <button class="filtro" data-estado="pendiente">Pendientes</button>
+                <button class="filtro" data-estado="confirmada">Confirmadas</button>
+                <button class="filtro" data-estado="cancelada">Canceladas</button>
+            </div>
+
+            <button class="btn-nuevo">+ Agendar cita</button>
+
+        </div>
+
+
+        <div class="tabla-citas">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Paciente</th>
+                        <th>Médico</th>
+                        <th>Consultorio</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="cuerpoTablaCitas">
+
+                    <tr data-estado="confirmada">
+                        <td>22 sep 2026</td>
+                        <td>08:00 a.m.</td>
+                        <td>Juan Pérez</td>
+                        <td>Dr. Juan Pérez</td>
+                        <td>101</td>
+                        <td><span class="estado estado-confirmada">Confirmada</span></td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Cancelar</button>
+                        </td>
+                    </tr>
+
+                    <tr data-estado="pendiente">
+                        <td>22 sep 2026</td>
+                        <td>09:30 a.m.</td>
+                        <td>María Gómez</td>
+                        <td>Dra. María Gómez</td>
+                        <td>102</td>
+                        <td><span class="estado estado-pendiente">Pendiente</span></td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Cancelar</button>
+                        </td>
+                    </tr>
+
+                    <tr data-estado="confirmada">
+                        <td>22 sep 2026</td>
+                        <td>11:00 a.m.</td>
+                        <td>Andrés Salazar</td>
+                        <td>Dra. Camila Rojas</td>
+                        <td>202</td>
+                        <td><span class="estado estado-confirmada">Confirmada</span></td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Cancelar</button>
+                        </td>
+                    </tr>
+
+                    <tr data-estado="cancelada">
+                        <td>22 sep 2026</td>
+                        <td>02:00 p.m.</td>
+                        <td>Laura Torres</td>
+                        <td>Dr. Andrés Ruiz</td>
+                        <td>201</td>
+                        <td><span class="estado estado-cancelada">Cancelada</span></td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+
+                    <tr data-estado="pendiente">
+                        <td>23 sep 2026</td>
+                        <td>10:15 a.m.</td>
+                        <td>Carlos Medina</td>
+                        <td>Dr. Juan Pérez</td>
+                        <td>101</td>
+                        <td><span class="estado estado-pendiente">Pendiente</span></td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="eliminar">Cancelar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <p class="sin-resultados" id="sinResultadosCitas" style="display:none;">
+                No se encontraron citas con ese criterio.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="../js/citas.js"></script>
+
+</body>
+</html>

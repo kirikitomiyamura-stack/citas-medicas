@@ -1,0 +1,28 @@
+.instrucciones {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.oculto {
+    display: none;
+}
+
+.icono-exito {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.volver-login {
+    display: block;
+    margin-top: 20px;
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.volver-login:hover {
+    text-decoration: underline;
+}

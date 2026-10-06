@@ -1,0 +1,172 @@
+.barra-usuarios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.barra-usuarios input {
+    width: 350px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.barra-usuarios input:focus {
+    border-color: #1976d2;
+}
+
+.btn-nuevo {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #1976d2;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-nuevo:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   TABLA
+========================= */
+
+.tabla-usuarios {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .10);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    background: #f4f6f9;
+    color: #444;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+tr:hover {
+    background: #f8fbff;
+}
+
+.usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.avatar-admin { background: #7b1fa2; }
+.avatar-recepcion { background: #1976d2; }
+.avatar-medico { background: #00897b; }
+
+.rol {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rol-admin {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.rol-recepcion {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.rol-medico {
+    background: #e0f2f1;
+    color: #00897b;
+}
+
+.toggle-estado {
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.toggle-estado.activo {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.toggle-estado.inactivo {
+    background: #f1f1f1;
+    color: #777;
+}
+
+.editar,
+.eliminar {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.editar {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.editar:hover {
+    background: #bbdefb;
+}
+
+.eliminar {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.eliminar:hover {
+    background: #ffcdd2;
+}
+
+.sin-resultados {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+    font-size: 15px;
+}

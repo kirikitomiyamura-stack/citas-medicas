@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CitaFácil</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <h2>CITAFÁCIL</h2>
+
+        <ul>
+            <li class="activo">Inicio</li>
+
+            <li><a href="pacientes.html">Pacientes</a></li>
+
+            <li><a href="medicos.html">Médicos</a></li>
+
+            <li><a href="consultorios.html">Consultorios</a></li>
+
+            <li><a href="citas.html">Citas</a></li>
+
+            <li><a href="tratamientos.html">Tratamientos</a></li>
+
+            <li><a href="usuarios.html">Usuarios</a></li>
+
+            <li><a href="cerrarsesion.html">Cerrar Sesion</a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="contenido">
+
+        <div class="encabezado">
+
+            <h1 id="saludo">Bienvenido</h1>
+
+            <p>Bienvenido de Nuevo </p>
+
+            <span id="fechaActual"></span>
+
+        </div>
+
+
+        <!-- ACCESOS RÁPIDOS -->
+        <div class="accesos-rapidos">
+
+            <a href="pacientes.html" class="acceso">
+                <span class="acceso-icono"></span>
+                Nuevo paciente
+            </a>
+
+            <a href="medicos.html" class="acceso">
+                <span class="acceso-icono"></span>
+                Nuevo médico
+            </a>
+
+            <a href="citas.html" class="acceso">
+                <span class="acceso-icono"></span>
+                Nueva cita
+            </a>
+
+            <a href="consultorios.html" class="acceso">
+                <span class="acceso-icono"></span>
+                Nuevo consultorio
+            </a>
+
+        </div>
+
+
+        <!-- TARJETAS DE RESUMEN -->
+        <div class="tarjetas">
+
+            <div class="tarjeta pacientes">
+                <span class="tarjeta-icono"></span>
+                <h3>Pacientes</h3>
+                <p id="totalPacientes">0</p>
+            </div>
+
+            <div class="tarjeta medicos">
+                <span class="tarjeta-icono"></span>
+                <h3>Médicos</h3>
+                <p id="totalMedicos">0</p>
+            </div>
+
+            <div class="tarjeta citas">
+                <span class="tarjeta-icono"></span>
+                <h3>Citas</h3>
+                <p id="totalCitas">0</p>
+            </div>
+
+            <div class="tarjeta consultorios">
+                <span class="tarjeta-icono"></span>
+                <h3>Consultorios</h3>
+                <p id="totalConsultorios">0</p>
+            </div>
+
+        </div>
+
+
+        <!-- PRÓXIMAS CITAS -->
+        <div class="proximas-citas">
+
+            <div class="proximas-header">
+                <h2>Próximas citas</h2>
+                <a href="citas.html">Ver todas →</a>
+            </div>
+
+            <ul class="lista-citas">
+
+                <li>
+                    <span class="cita-hora">09:00 AM</span>
+                    <span class="cita-paciente">Juan Pérez</span>
+                    <span class="cita-medico">Dr. Carlos Ruiz · Dermatología</span>
+                    <span class="cita-estado confirmada">Confirmada</span>
+                </li>
+
+                <li>
+                    <span class="cita-hora">10:30 AM</span>
+                    <span class="cita-paciente">María Gómez</span>
+                    <span class="cita-medico">Dra. Ana Torres · Psicología</span>
+                    <span class="cita-estado confirmada">Confirmada</span>
+                </li>
+
+                <li>
+                    <span class="cita-hora">11:15 AM</span>
+                    <span class="cita-paciente">Luis Ramírez</span>
+                    <span class="cita-medico">Dr. Juan Pérez · Cardiología</span>
+                    <span class="cita-estado pendiente">Pendiente</span>
+                </li>
+
+                <li>
+                    <span class="cita-hora">02:00 PM</span>
+                    <span class="cita-paciente">Sofía Herrera</span>
+                    <span class="cita-medico">Dra. María Gómez · Pediatría</span>
+                    <span class="cita-estado confirmada">Confirmada</span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/dashboard.js"></script>
+
+
+</body>
+</html>
