@@ -5,7 +5,7 @@ boton.addEventListener("click", function () {
     const correo = document.getElementById("correo").value;
     const password = document.getElementById("password").value;
 
-    fetch("https://citas-medicas-6l2b.onrender.com", {
+fetch("https://citas-medicas-6l2b.onrender.com/login", {
 
         method: "POST",
 
