@@ -11,7 +11,7 @@ boton.addEventListener("click", function () {
         return;
     }
 
-    fetch("http://localhost:3000/recuperar-password", {
+    fetch("https://citas-medicas-6l2b.onrender.com", {
 
         method: "POST",
 
