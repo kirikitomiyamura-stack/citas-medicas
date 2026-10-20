@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CITAFÁCIL | Sistema de Citas Médicas</title>
-<link rel="stylesheet" href="css/inicio.css">
+
+<title>CITAFÁCIL | Sistema de Citas Médicas</title>
+<link rel="stylesheet" href="../frontend/css/inicio.css">
 
 </head>
 
@@ -23,7 +25,6 @@
     <nav>
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
-        <a href="#equipo">Equipo médico</a>
         <a href="#nosotros">Nosotros</a>
 
         <a href="login.html" class="btn-login">
@@ -34,58 +35,123 @@
 </header>
 
 
-<section class="latido" id="inicio">
+<!-- HERO -->
+<section class="hero" id="inicio">
 
-  <div class="latido-texto">
-    <h1>Tu salud,<br>más organizada.</h1>
+    <div class="hero-contenido">
 
-    <p>
-      Gestiona tus citas médicas de una manera
-      sencilla, rápida y organizada con CITAFÁCIL.
-    </p>
+        <!-- Texto -->
+        <div class="hero-texto">
 
-    <a href="login.html" class="latido-boton">Iniciar sesión</a>
-  </div>
+            <p class="hero-etiqueta">Tu salud, a tu ritmo</p>
 
-  <svg class="latido-ecg" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
-    <path pathLength="1" d="M0 120 H260 L285 120 L305 92 L325 146 L355 18 L385 200 L410 120 H700 L725 120 L745 96 L765 142 L795 40 L825 188 L850 120 H1200"/>
-  </svg>
+            <h1>Tu salud,<br>más organizada.</h1>
 
-  <!-- Datos de ejemplo: cámbialos o borra este bloque si no lo quieres -->
-  <div class="latido-cita" aria-hidden="true">
-    <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="10"/><path d="M8 12.5l3 3 5-6"/>
-    </svg>
-    <div>
-      <strong>Cita confirmada</strong>
-      <span>Dra. Ramírez · martes 9:30 a. m.</span>
+            <p class="hero-descripcion">
+                Gestiona tus citas médicas de una manera
+                sencilla, rápida y organizada con CITAFÁCIL.
+            </p>
+
+            <ul class="hero-lista">
+                <li>Citas en un solo lugar</li>
+                <li>Médicos y consultorios organizados</li>
+            </ul>
+
+            <a href="login.html" class="hero-boton">Iniciar sesión</a>
+
+        </div>
+
+        <!-- Ilustración -->
+        <div class="hero-imagen">
+
+            <svg viewBox="0 0 400 400" role="img" aria-label="Médico con estetoscopio">
+
+                <!-- Esto recorta todo dentro del círculo grande -->
+                <defs>
+                    <clipPath id="recorte">
+                        <circle cx="200" cy="200" r="190"/>
+                    </clipPath>
+                </defs>
+
+                <!-- Círculos de fondo -->
+                <circle cx="200" cy="200" r="190" fill="#e8b4a0"/>
+                <circle cx="200" cy="200" r="150" fill="none" stroke="#1e3a5f" stroke-width="2"/>
+
+                <g clip-path="url(#recorte)">
+
+                    <!-- Línea del latido (detrás del médico) -->
+                    <path class="latido-linea" d="M10 250 H120 L135 250 L145 225 L158 275 L175 170 L192 300 L205 250 H390"/>
+
+                    <!-- Bata -->
+                    <path d="M105 400 V320 Q105 262 165 250 H235 Q295 262 295 320 V400 Z" fill="#f1f5f4"/>
+
+                    <!-- Camisa -->
+                    <path d="M172 250 L200 310 L228 250 Z" fill="#7be0b8"/>
+
+                    <!-- Estetoscopio -->
+                    <path d="M178 255 V300 Q178 328 200 328 Q222 328 222 300 V255" fill="none" stroke="#0b6153" stroke-width="6" stroke-linecap="round"/>
+                    <circle cx="200" cy="332" r="7" fill="#0b6153"/>
+
+                    <!-- Cuello y cabeza -->
+                    <rect x="188" y="222" width="24" height="32" fill="#a8603f"/>
+                    <circle cx="200" cy="200" r="38" fill="#b9714f"/>
+
+                    <!-- Cabello -->
+                    <path d="M161 198 Q158 150 200 150 Q242 150 239 198 Q222 172 200 174 Q178 172 161 198 Z" fill="#2b2118"/>
+
+                </g>
+
+                <!-- Estrellitas decorativas -->
+                <path d="M365 70 L369 82 L381 86 L369 90 L365 102 L361 90 L349 86 L361 82 Z" fill="#7be0b8"/>
+                <path d="M40 330 L43 338 L51 341 L43 344 L40 352 L37 344 L29 341 L37 338 Z" fill="#7be0b8"/>
+
+            </svg>
+
+            <!-- Tarjeta flotante (datos de ejemplo, puedes cambiarlos) -->
+            <div class="hero-tarjeta">
+                <div class="check">✓</div>
+                <div>
+                    <strong>Tu próxima cita</strong>
+                    <span>Un paso más cerca de cuidarte</span>
+                </div>
+            </div>
+
+        </div>
+
     </div>
-  </div>
 
 </section>
 
 
-<!-- ESTADÍSTICAS -->
-<section class="stats-bar">
+<!-- BUSCADOR -->
+<section class="buscador">
 
-    <div class="stat">
-        <span class="stat-numero">+20</span>
-        <span class="stat-label">Médicos especialistas</span>
+    <h2>¿Qué necesitas hoy?</h2>
+    <p class="buscador-subtitulo">Elige una especialidad y una fecha para empezar.</p>
+
+    <div class="buscador-campos">
+
+        <select id="especialidad">
+            <option value="">Especialidad</option>
+            <option>Medicina general</option>
+            <option>Psicología</option>
+            <option>Pediatría</option>
+            <option>Cardiología</option>
+        </select>
+
+        <input type="date" id="fecha">
+
+        <button onclick="buscar()">Buscar</button>
+
     </div>
 
-    <div class="stat">
-        <span class="stat-numero">+500</span>
-        <span class="stat-label">Pacientes atendidos</span>
-    </div>
+    <p class="buscador-mensaje" id="mensaje"></p>
 
-    <div class="stat">
-        <span class="stat-numero">+10</span>
-        <span class="stat-label">Consultorios disponibles</span>
-    </div>
-
-    <div class="stat">
-        <span class="stat-numero">+1000</span>
-        <span class="stat-label">Citas gestionadas</span>
+    <div class="buscador-atajos">
+        Más buscadas:
+        <a href="#">Psicología</a>
+        <a href="#">Pediatría</a>
+        <a href="#">Medicina general</a>
     </div>
 
 </section>
@@ -119,7 +185,28 @@
 
 </section>
 
+   <section id="popular-query-shorts">
 
+    <div class="container">
+
+        <ul class="list-inline">
+
+            <li class="list-inline-item"><a href="https://www.citafacil.co/psicologo">Psicologo</a></li>
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item"></li>
+            <li class="list-inline-item"></li>
+
+
+
+        </ul>
+
+    </div>
+
+
+   </section>
 <!-- SERVICIOS -->
 <section class="servicios" id="servicios">
 
@@ -139,7 +226,7 @@
         <div class="card">
 
             <div class="icono">
-                
+                📅
             </div>
 
             <h3>
@@ -157,7 +244,7 @@
         <div class="card">
 
             <div class="icono">
-                
+                👨‍⚕️
             </div>
 
             <h3>
@@ -175,7 +262,7 @@
         <div class="card">
 
             <div class="icono">
-                
+                👤
             </div>
 
             <h3>
@@ -193,7 +280,7 @@
         <div class="card">
 
             <div class="icono">
-                
+                🏥
             </div>
 
             <h3>
@@ -212,55 +299,6 @@
 </section>
 
 
-<!-- EQUIPO MÉDICO -->
-<section class="equipo" id="equipo">
-
-    <div class="titulo-seccion">
-
-        <p>NUESTRO EQUIPO</p>
-
-        <h2>
-            Médicos especialistas a tu disposición
-        </h2>
-
-    </div>
-
-    <div class="equipo-grid">
-
-        <div class="equipo-card">
-            <img src="../img/medico-1.jpeg" alt="Dr. Juan Pérez">
-            <h3>Dr. Juan Pérez</h3>
-            <p>Cardiología</p>
-        </div>
-
-        <div class="equipo-card">
-            <img src="../img/medico-2.jpeg" alt="Dra. María Gómez">
-            <h3>Dra. María Gómez</h3>
-            <p>Pediatría</p>
-        </div>
-
-        <div class="equipo-card">
-            <img src="../img/medico-3.jpeg" alt="Dr. Carlos Ruiz">
-            <h3>Dr. Carlos Ruiz</h3>
-            <p>Dermatología</p>
-        </div>
-
-        <div class="equipo-card">
-            <img src="../img/medico-4.jpeg" alt="Dra. Ana Torres">
-            <h3>Dra. Ana Torres</h3>
-            <p>Psicología</p>
-        </div>
-
-        <div class="equipo-card">
-            <img src="../img/medico-5.jpeg" alt="Dr. Luis Ramírez">
-            <h3>Dr. Luis Ramírez</h3>
-            <p>Medicina general</p>
-        </div>
-
-    </div>
-
-</section>
-
 
 <section class="final">
 
@@ -272,7 +310,7 @@
         Ingresa al sistema para gestionar toda la información.
     </p>
 
-    <a href="login.html" class="final-button">
+    <a href="" class="final-button">
         Iniciar sesión
     </a>
 
@@ -295,6 +333,9 @@
     </span>
 
 </footer>
+```
+
+<script src="/frontend/js/buscador.js"></script>
 
 </body>
 
