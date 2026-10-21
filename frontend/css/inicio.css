@@ -60,7 +60,7 @@ color: #e8b4a0;
 
 .btn-login {
 background: #e8b4a0;
-color: white !important;
+color: #181311 !important;
 padding: 12px 23px;
 border-radius: 7px;
 font-weight: bold;
@@ -70,7 +70,7 @@ transition: 0.3s;
 }
 
 .btn-login:hover {
-background: #e8b4a0;
+background: #f0c4b3;
 transform: translateY(-2px);
 }
 
@@ -344,18 +344,27 @@ PRESENTACIÓN
 ========================= */
 
 .presentacion {
-padding: 90px 15%;
+padding: 90px 8%;
 background: white;
-text-align: center;
+}
+
+.presentacion-contenido {
+max-width: 1100px;
+margin: auto;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 60px;
 }
 
 .presentacion-texto {
-max-width: 850px;
-margin: auto;
+flex: 1;
+text-align: left;
 }
 
 .titulo-pequeno {
-color: #1976d2;
+color: #9a5b45;
 
 
 font-size: 14px;
@@ -391,6 +400,97 @@ margin-bottom: 12px;
 
 }
 
+/* Vista de ejemplo del panel */
+
+.panel-demo {
+width: 420px;
+flex-shrink: 0;
+
+background: white;
+
+border-radius: 14px;
+
+box-shadow: 0 10px 30px rgba(30, 58, 95, 0.15);
+
+overflow: hidden;
+}
+
+.panel-barra {
+background: #1e3a5f;
+color: #e8b4a0;
+
+font-size: 13px;
+
+padding: 12px 18px;
+
+display: flex;
+justify-content: space-between;
+}
+
+.panel-numeros {
+padding: 16px;
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+}
+
+.numero-caja {
+background: #eef2f8;
+
+border-radius: 10px;
+
+padding: 14px;
+}
+
+.numero-caja.durazno {
+background: #f8e6dd;
+}
+
+.numero-caja small {
+display: block;
+
+color: #475569;
+
+font-size: 13px;
+
+margin-bottom: 4px;
+}
+
+.numero-caja strong {
+font-size: 30px;
+
+color: #1e3a5f;
+}
+
+.panel-citas {
+padding: 0 16px 14px;
+}
+
+.panel-fila {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+border-top: 1px solid #e2e8f0;
+
+padding: 12px 0;
+
+font-size: 14px;
+color: #1e3a5f;
+}
+
+.hora-etiqueta {
+background: #e8b4a0;
+color: #181311;
+
+border-radius: 6px;
+
+padding: 2px 10px;
+
+font-size: 13px;
+}
+
 /* =========================
 SERVICIOS
 ========================= */
@@ -409,7 +509,7 @@ margin-bottom: 55px;
 }
 
 .titulo-seccion p {
-color: #1976d2;
+color: #9a5b45;
 
 
 font-size: 14px;
@@ -433,7 +533,7 @@ color: #172033;
 display: grid;
 
 
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(3, 1fr);
 
 gap: 25px;
 
@@ -444,11 +544,11 @@ gap: 25px;
 background: white;
 
 
-padding: 35px 25px;
+padding: 32px 26px;
 
 border-radius: 12px;
 
-text-align: center;
+text-align: left;
 
 box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 
@@ -467,12 +567,30 @@ box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .icono {
-font-size: 40px;
+width: 52px;
+height: 52px;
 
+border-radius: 14px;
+
+background: #f8e6dd;
+color: #1e3a5f;
+
+display: flex;
+align-items: center;
+justify-content: center;
 
 margin-bottom: 20px;
+}
 
+.icono svg {
+width: 26px;
+height: 26px;
 
+fill: none;
+stroke: currentColor;
+stroke-width: 1.8;
+stroke-linecap: round;
+stroke-linejoin: round;
 }
 
 .card h3 {
@@ -506,7 +624,7 @@ padding: 90px 20px;
 
 text-align: center;
 
-background: #1976d2;
+background: #1e3a5f;
 
 color: white;
 
@@ -537,8 +655,8 @@ opacity: 0.9;
 display: inline-block;
 
 
-background: white;
-color: #1976d2;
+background: #e8b4a0;
+color: #181311;
 
 padding: 14px 30px;
 
@@ -555,6 +673,8 @@ transition: 0.3s;
 
 .final-button:hover {
 transform: translateY(-2px);
+
+background: #f0c4b3;
 }
 
 /* =========================
@@ -562,7 +682,7 @@ FOOTER
 ========================= */
 
 footer {
-background: #172033;
+background: #16304f;
 
 
 color: white;
@@ -574,12 +694,36 @@ padding: 35px 20px;
 }
 
 footer h3 {
+color: #e8b4a0;
+
 font-size: 22px;
 
 
 margin-bottom: 8px;
 
 
+}
+
+.footer-enlaces {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 24px;
+
+margin-bottom: 18px;
+}
+
+.footer-enlaces a {
+color: #cbd5e1;
+
+font-size: 14px;
+text-decoration: none;
+
+transition: 0.3s;
+}
+
+.footer-enlaces a:hover {
+color: #e8b4a0;
 }
 
 footer p {
@@ -600,6 +744,27 @@ font-size: 13px;
 
 }
 
+/* Aparición suave de tarjetas y panel (la activa el script de index.html) */
+
+.oculta {
+opacity: 0;
+transform: translateY(18px);
+}
+
+.oculta.visible {
+opacity: 1;
+transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+.oculta {
+    opacity: 1;
+    transform: none;
+}
+
+}
+
 /* =========================
 RESPONSIVE
 ========================= */
@@ -617,6 +782,16 @@ RESPONSIVE
 
 .cards {
     grid-template-columns: repeat(2, 1fr);
+}
+
+.presentacion-contenido {
+    flex-direction: column;
+    gap: 40px;
+}
+
+.panel-demo {
+    width: 100%;
+    max-width: 460px;
 }
 
 

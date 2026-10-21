@@ -8,7 +8,9 @@
 
 
 <title>CITAFÁCIL | Sistema de Citas Médicas</title>
-<link rel="stylesheet" href="css/inicio.css">
+<meta name="description" content="CITAFÁCIL: sistema de gestión de citas médicas para organizar pacientes, médicos, consultorios, tratamientos y medicamentos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231e3a5f'/%3E%3Cpath d='M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z' fill='%23e8b4a0'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../frontend/css/inicio.css">
 
 </head>
 
@@ -27,7 +29,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#nosotros">Nosotros</a>
 
-        <a href="login.html" class="btn-login">
+        <a href="pages/login.html" class="btn-login">
             Iniciar sesión
         </a>
     </nav>
@@ -57,7 +59,7 @@
                 <li>Médicos y consultorios organizados</li>
             </ul>
 
-            <a href="login.html" class="hero-boton">Iniciar sesión</a>
+            <a href="pages/login.html" class="hero-boton">Iniciar sesión</a>
 
         </div>
 
@@ -123,90 +125,86 @@
 </section>
 
 
-<!-- BUSCADOR -->
-<section class="buscador">
-
-    <h2>¿Qué necesitas hoy?</h2>
-    <p class="buscador-subtitulo">Elige una especialidad y una fecha para empezar.</p>
-
-    <div class="buscador-campos">
-
-        <select id="especialidad">
-            <option value="">Especialidad</option>
-            <option>Medicina general</option>
-            <option>Psicología</option>
-            <option>Pediatría</option>
-            <option>Cardiología</option>
-        </select>
-
-        <input type="date" id="fecha">
-
-        <button onclick="buscar()">Buscar</button>
-
-    </div>
-
-    <p class="buscador-mensaje" id="mensaje"></p>
-
-    <div class="buscador-atajos">
-        Más buscadas:
-        <a href="#">Psicología</a>
-        <a href="#">Pediatría</a>
-        <a href="#">Medicina general</a>
-    </div>
-
-</section>
-
-
 <!-- PRESENTACIÓN -->
 <section class="presentacion" id="nosotros">
 
-    <div class="presentacion-texto">
+    <div class="presentacion-contenido">
 
-        <p class="titulo-pequeno">
-            CONOCE CITAFÁCIL
-        </p>
+        <div class="presentacion-texto">
 
-        <h2>
-            Una forma más sencilla de gestionar tus citas
-        </h2>
+            <p class="titulo-pequeno">
+                CONOCE CITAFÁCIL
+            </p>
 
-        <p>
-            CITAFÁCIL es un sistema diseñado para facilitar
-            la gestión de citas médicas y la información
-            relacionada con pacientes, médicos y consultorios.
-        </p>
+            <h2>
+                Una forma más sencilla de gestionar tus citas
+            </h2>
 
-        <p>
-            Nuestro objetivo es ofrecer una plataforma sencilla,
-            organizada y fácil de utilizar.
-        </p>
+            <p>
+                CITAFÁCIL es un sistema diseñado para facilitar
+                la gestión de citas médicas y la información
+                relacionada con pacientes, médicos y consultorios.
+            </p>
+
+            <p>
+                Nuestro objetivo es ofrecer una plataforma sencilla,
+                organizada y fácil de utilizar.
+            </p>
+
+        </div>
+
+        <!-- Vista de ejemplo del panel (los números son de muestra) -->
+        <div class="panel-demo" aria-hidden="true">
+
+            <div class="panel-barra">
+                <span>Panel de control</span>
+                <span>Hoy</span>
+            </div>
+
+            <div class="panel-numeros">
+
+                <div class="numero-caja durazno">
+                    <small>Pacientes</small>
+                    <strong class="numero" data-valor="128">128</strong>
+                </div>
+
+                <div class="numero-caja">
+                    <small>Médicos</small>
+                    <strong class="numero" data-valor="14">14</strong>
+                </div>
+
+                <div class="numero-caja">
+                    <small>Citas hoy</small>
+                    <strong class="numero" data-valor="23">23</strong>
+                </div>
+
+                <div class="numero-caja durazno">
+                    <small>Consultorios</small>
+                    <strong class="numero" data-valor="6">6</strong>
+                </div>
+
+            </div>
+
+            <div class="panel-citas">
+
+                <div class="panel-fila">
+                    <span>Ana Torres · Cardiología</span>
+                    <span class="hora-etiqueta">9:00</span>
+                </div>
+
+                <div class="panel-fila">
+                    <span>Luis Rojas · Pediatría</span>
+                    <span class="hora-etiqueta">10:30</span>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
-   <section id="popular-query-shorts">
-
-    <div class="container">
-
-        <ul class="list-inline">
-
-            <li class="list-inline-item"><a href="https://www.citafacil.co/psicologo">Psicologo</a></li>
-            <li class="list-inline-item"></li>
-            <li class="list-inline-item"></li>
-            <li class="list-inline-item"></li>
-            <li class="list-inline-item"></li>
-            <li class="list-inline-item"></li>
-            <li class="list-inline-item"></li>
-
-
-
-        </ul>
-
-    </div>
-
-
-   </section>
 <!-- SERVICIOS -->
 <section class="servicios" id="servicios">
 
@@ -226,17 +224,12 @@
         <div class="card">
 
             <div class="icono">
-                📅
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.8 0 4.5 1.8 4.5 4.5"/></svg>
             </div>
 
-            <h3>
-                Gestionar citas
-            </h3>
+            <h3>Pacientes</h3>
 
-            <p>
-                Registra y organiza las citas médicas
-                de manera sencilla.
-            </p>
+            <p>Registra y consulta los datos de cada paciente.</p>
 
         </div>
 
@@ -244,17 +237,12 @@
         <div class="card">
 
             <div class="icono">
-                👨‍⚕️
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></svg>
             </div>
 
-            <h3>
-                Médicos
-            </h3>
+            <h3>Médicos</h3>
 
-            <p>
-                Administra la información de los médicos
-                y sus especialidades.
-            </p>
+            <p>Administra médicos, especialidades y horarios.</p>
 
         </div>
 
@@ -262,17 +250,12 @@
         <div class="card">
 
             <div class="icono">
-                👤
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16"/><path d="M15 10h4a1 1 0 0 1 1 1v10"/><path d="M2 21h20M8 8h3M8 12h3M8 16h3"/></svg>
             </div>
 
-            <h3>
-                Pacientes
-            </h3>
+            <h3>Consultorios</h3>
 
-            <p>
-                Mantén organizada la información de
-                los pacientes registrados.
-            </p>
+            <p>Controla los consultorios y su ubicación.</p>
 
         </div>
 
@@ -280,17 +263,38 @@
         <div class="card">
 
             <div class="icono">
-                🏥
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17M8.5 15l2.5 2.5 4.5-4.5"/></svg>
             </div>
 
-            <h3>
-                Consultorios
-            </h3>
+            <h3>Citas</h3>
 
-            <p>
-                Gestiona los consultorios disponibles
-                dentro del sistema.
-            </p>
+            <p>Agenda y sigue el estado de cada cita.</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icono">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M12 9v6M9 12h6"/></svg>
+            </div>
+
+            <h3>Tratamientos</h3>
+
+            <p>Registra indicaciones y seguimiento médico.</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icono">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(-45 12 12)"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5"/><path d="M12 8.5v7"/></g></svg>
+            </div>
+
+            <h3>Medicamentos</h3>
+
+            <p>Lleva los medicamentos de cada tratamiento.</p>
 
         </div>
 
@@ -310,7 +314,7 @@
         Ingresa al sistema para gestionar toda la información.
     </p>
 
-    <a href="" class="final-button">
+    <a href="pages/login.html" class="final-button">
         Iniciar sesión
     </a>
 
@@ -328,14 +332,71 @@
         Sistema de Gestión de Citas Médicas
     </p>
 
+    <nav class="footer-enlaces">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="pages/login.html">Iniciar sesión</a>
+    </nav>
+
     <span>
         © 2026 CITAFÁCIL
     </span>
 
 </footer>
-```
+<script>
+    // Las tarjetas y el panel aparecen suavemente cuando llegan a la pantalla
+    var elementos = document.querySelectorAll(".card, .panel-demo");
 
-<script src="/frontend/js/buscador.js"></script>
+    // Hace que un número suba desde 0 hasta su valor
+    function contar(numero) {
+
+        var meta = Number(numero.dataset.valor);
+        var actual = 0;
+        var paso = Math.max(1, Math.ceil(meta / 30));
+
+        var reloj = setInterval(function () {
+            actual = actual + paso;
+
+            if (actual >= meta) {
+                actual = meta;
+                clearInterval(reloj);
+            }
+
+            numero.textContent = actual;
+        }, 30);
+    }
+
+    if ("IntersectionObserver" in window) {
+
+        var observador = new IntersectionObserver(function (entradas) {
+
+            entradas.forEach(function (entrada) {
+
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add("visible");
+                    observador.unobserve(entrada.target);
+
+                    // Si es el panel, también cuenta sus números
+                    entrada.target.querySelectorAll(".numero").forEach(contar);
+                }
+            });
+
+        }, { threshold: 0.2 });
+
+        elementos.forEach(function (elemento, i) {
+            elemento.classList.add("oculta");
+            elemento.style.transitionDelay = (i % 3) * 0.12 + "s";
+
+            // Los números empiezan en 0 y suben cuando aparece el panel
+            elemento.querySelectorAll(".numero").forEach(function (numero) {
+                numero.textContent = "0";
+            });
+
+            observador.observe(elemento);
+        });
+    }
+</script>
 
 </body>
 
