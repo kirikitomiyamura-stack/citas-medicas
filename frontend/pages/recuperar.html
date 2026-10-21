@@ -3,58 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar contraseña - CitaFácil</title>
+    <title>Recuperar contraseña | CITAFÁCIL</title>
 
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231e3a5f'/%3E%3Cpath d='M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z' fill='%23e8b4a0'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/recuperar.css">
 
 </head>
-<body>
+<body class="pagina-sesion">
 
-    <div class="login">
+<main class="sesion">
 
-        <h1>CITAFÁCIL</h1>
 
-        <h3>Recuperar contraseña</h3>
+    <!-- LADO IZQUIERDO: la marca -->
+    <section class="sesion-marca">
 
-        <!-- PASO 1: pedir el correo -->
-        <div id="pasoCorreo">
+        <div class="sesion-logo">
 
-            <p class="instrucciones">
-                Ingresa tu correo electrónico y te enviaremos
-                un enlace para restablecer tu contraseña.
-            </p>
+            <span class="sesion-logo-icono">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z"/>
+                </svg>
+            </span>
 
-            <input
-                type="email"
-                id="correoRecuperar"
-                placeholder="Correo electrónico">
-
-            <button id="btnEnviar">
-                Enviar enlace de recuperación
-            </button>
+            CITAFÁCIL
 
         </div>
 
-        <!-- PASO 2: confirmación (oculto al inicio) -->
-        <div id="pasoConfirmacion" class="oculto">
 
-            <div class="icono-exito">✅</div>
+        <div>
 
-            <p class="instrucciones">
-                Si el correo ingresado está registrado, te llegará
-                un enlace para restablecer tu contraseña en unos minutos.
+            <h1 class="sesion-titulo">
+                Recupera<br>
+                <span>tu acceso.</span>
+            </h1>
+
+            <p class="sesion-texto">
+                Te ayudamos a volver a entrar a tu cuenta
+                en unos pocos pasos.
             </p>
+
+            <ol class="sesion-pasos">
+
+                <li>
+                    <span class="sesion-numero">1</span>
+                    <div>
+                        <strong>Escribe tu correo</strong>
+                        <span>El mismo con el que te registraste</span>
+                    </div>
+                </li>
+
+                <li>
+                    <span class="sesion-numero">2</span>
+                    <div>
+                        <strong>Revisa tu bandeja</strong>
+                        <span>Te llegará un enlace de recuperación</span>
+                    </div>
+                </li>
+
+                <li>
+                    <span class="sesion-numero">3</span>
+                    <div>
+                        <strong>Crea una nueva contraseña</strong>
+                        <span>Y vuelve a iniciar sesión</span>
+                    </div>
+                </li>
+
+            </ol>
 
         </div>
 
-        <a href="login.html" class="volver-login">
-            ← Volver a iniciar sesión
-        </a>
 
-    </div>
+        <!-- Línea del latido (adorno) -->
+        <svg class="sesion-latido" viewBox="0 0 600 70" preserveAspectRatio="none" aria-hidden="true">
+            <path pathLength="1" d="M0 38 H190 L205 38 L218 20 L232 56 L250 4 L268 66 L282 38 H420 L432 38 L442 26 L452 48 L466 12 L480 58 L490 38 H600"/>
+        </svg>
 
-    <script src="../js/recuperar.js"></script>
+
+        <div class="sesion-pie">
+            <span>© 2026 CITAFÁCIL</span>
+            <span>Sistema de Gestión de Citas Médicas</span>
+        </div>
+
+    </section>
+
+
+    <!-- LADO DERECHO: el formulario -->
+    <section class="sesion-lado">
+
+        <div class="sesion-tarjeta">
+
+            <!-- PASO 1: pedir el correo -->
+            <div id="pasoCorreo">
+
+                <div class="sesion-icono-grande">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg>
+                </div>
+
+                <h2>¿Olvidaste tu contraseña?</h2>
+
+                <p class="sesion-subtitulo">
+                    Escribe tu correo y te enviaremos un enlace
+                    para restablecerla.
+                </p>
+
+                <form id="formularioRecuperar" novalidate>
+
+                    <div class="sesion-etiqueta">
+                        <label for="correoRecuperar">Correo electrónico</label>
+                    </div>
+
+                    <div class="sesion-campo">
+                        <svg class="icono-campo" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                        <input type="email" id="correoRecuperar" placeholder="nombre@correo.com" autocomplete="email">
+                    </div>
+
+                    <p class="sesion-mensaje" id="mensajeRecuperar" aria-live="polite"></p>
+
+                    <button type="submit" class="sesion-boton" id="btnEnviar">
+                        <span>Enviar enlace de recuperación</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- PASO 2: confirmación (oculto al inicio) -->
+            <div id="pasoConfirmacion" class="oculto sesion-exito">
+
+                <div class="sesion-icono-grande">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                </div>
+
+                <h2>Revisa tu correo</h2>
+
+                <p class="sesion-subtitulo">
+                    Si <strong id="correoConfirmado"></strong> está registrado,
+                    te llegará un enlace para restablecer tu contraseña
+                    en unos minutos.
+                </p>
+
+            </div>
+
+
+            <div class="sesion-ayuda">
+                <a class="sesion-volver" href="login.html">← Volver a iniciar sesión</a>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="../js/recuperar.js"></script>
 
 </body>
 </html>

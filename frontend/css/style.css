@@ -90,3 +90,610 @@ button:hover{
     background:#1565c0;
 
 }
+
+
+
+/* =====================================================
+PAGINA DE INICIO DE SESION (login.html)
+Todo lo de abajo usa la clase "pagina-sesion" o "sesion-",
+asi que NO cambia el aspecto de recuperar.html.
+===================================================== */
+
+body.pagina-sesion {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+    background: #f5f8fc;
+}
+
+.sesion {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+}
+
+
+/* ---------- LADO IZQUIERDO (marca) ---------- */
+
+.sesion-marca {
+    position: relative;
+    overflow: hidden;
+    background: #1e3a5f;
+    color: white;
+    padding: 48px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Circulos decorativos del fondo */
+.sesion-marca::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: -130px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: #264a75;
+}
+
+.sesion-marca::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+    left: -100px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: #1a3556;
+}
+
+.sesion-marca > * {
+    position: relative;
+    z-index: 1;
+}
+
+.sesion-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sesion-logo-icono {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: rgba(232, 180, 160, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sesion-logo-icono svg {
+    width: 22px;
+    height: 22px;
+    fill: #e8b4a0;
+}
+
+.sesion-titulo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 50px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.sesion-titulo span {
+    color: #e8b4a0;
+}
+
+.sesion-texto {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 420px;
+}
+
+.sesion-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 28px;
+    margin-top: 34px;
+    max-width: 440px;
+}
+
+.sesion-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.sesion-item svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    fill: none;
+    stroke: #e8b4a0;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sesion-item strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.sesion-item span {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+/* La linea del latido se dibuja una y otra vez */
+.sesion-latido {
+    width: 100%;
+    height: 70px;
+}
+
+.sesion-latido path {
+    fill: none;
+    stroke: #e8b4a0;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    opacity: 0.55;
+    animation: sesion-dibujar 6s ease-in-out infinite;
+}
+
+@keyframes sesion-dibujar {
+    0%   { stroke-dashoffset: 1; opacity: 0.55; }
+    55%  { stroke-dashoffset: 0; opacity: 0.55; }
+    90%  { stroke-dashoffset: 0; opacity: 0.55; }
+    100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.sesion-pie {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 13px;
+    color: #9fb3cc;
+}
+
+
+/* ---------- LADO DERECHO (formulario) ---------- */
+
+.sesion-lado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+}
+
+.sesion-tarjeta {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 36px;
+    box-shadow: 0 12px 40px rgba(30, 58, 95, 0.12);
+    animation: sesion-entrar 0.6s ease-out both;
+}
+
+@keyframes sesion-entrar {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.sesion-tarjeta h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    color: #1e3a5f;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.sesion-subtitulo {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.sesion-etiqueta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sesion-etiqueta label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #475569;
+}
+
+.sesion-etiqueta a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #9a5b45;
+    text-decoration: none;
+}
+
+.sesion-etiqueta a:hover {
+    text-decoration: underline;
+}
+
+.sesion-campo {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.sesion-campo input,
+.sesion-campo select {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 13px 14px 13px 44px;
+    border: 1px solid #dbe3ee;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #1e3a5f;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.sesion-campo.con-ojo input {
+    padding-right: 46px;
+}
+
+.sesion-campo input:focus,
+.sesion-campo select:focus {
+    outline: none;
+    border-color: #1e3a5f;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(232, 180, 160, 0.45);
+}
+
+.sesion-campo .icono-campo {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    fill: none;
+    stroke: #94a3b8;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Boton del ojito */
+.sesion-campo .ver-clave {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sesion-campo .ver-clave:hover {
+    background: #eef2f8;
+}
+
+.sesion-campo .ver-clave svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #64748b;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sesion-campo .ver-clave .tachado {
+    display: none;
+}
+
+.sesion-campo .ver-clave.activo .tachado {
+    display: block;
+}
+
+/* Avisos y errores */
+.sesion-mensaje {
+    min-height: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.sesion-mensaje.error {
+    color: #b91c1c;
+}
+
+.sesion-mensaje.info {
+    color: #475569;
+}
+
+/* Boton principal */
+.sesion-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #1e3a5f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sesion-boton:hover {
+    background: #2a4d7a;
+    transform: translateY(-2px);
+}
+
+.sesion-boton:focus-visible {
+    outline: 3px solid #e8b4a0;
+    outline-offset: 3px;
+}
+
+.sesion-boton:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+
+.sesion-boton svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #e8b4a0;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sesion-ayuda {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.sesion-volver {
+    display: inline-block;
+    margin-top: 8px;
+    color: #1e3a5f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sesion-volver:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- COSAS NUEVAS: pasos, recuerdame, registro y recuperar ---------- */
+
+/* Lista de pasos del lado izquierdo (registro y recuperar) */
+.sesion-pasos {
+    list-style: none;
+    margin-top: 34px;
+    display: grid;
+    gap: 22px;
+    max-width: 420px;
+}
+
+.sesion-pasos li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.sesion-numero {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #e8b4a0;
+    color: #181311;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sesion-pasos strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.sesion-pasos div span {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+/* Casilla "Recuerdame" */
+.sesion-recordar {
+    margin: -6px 0 16px;
+}
+
+.sesion-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #475569;
+    cursor: pointer;
+}
+
+.sesion-check input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    accent-color: #1e3a5f;
+    cursor: pointer;
+}
+
+/* Enlaces de texto dentro de la tarjeta (Registrate, Inicia sesion) */
+.sesion-registro {
+    color: #9a5b45;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sesion-registro:hover {
+    text-decoration: underline;
+}
+
+/* Barra de fuerza de la contrasena */
+.fuerza {
+    margin: -6px 0 18px;
+}
+
+.fuerza-barra {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.fuerza-barra span {
+    height: 5px;
+    border-radius: 3px;
+    background: #e2e8f0;
+    transition: 0.3s;
+}
+
+.fuerza-barra span.nivel1 { background: #b91c1c; }
+.fuerza-barra span.nivel2 { background: #d97706; }
+.fuerza-barra span.nivel3 { background: #65a30d; }
+.fuerza-barra span.nivel4 { background: #15803d; }
+
+.fuerza small {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* Circulo grande con icono (recuperar y cuenta creada) */
+.sesion-icono-grande {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #f8e6dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+}
+
+.sesion-icono-grande svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #1e3a5f;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sesion-exito .sesion-subtitulo {
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.sesion-exito .sesion-subtitulo strong {
+    color: #1e3a5f;
+}
+
+/* Enlace que se ve como el boton principal */
+a.sesion-boton {
+    text-decoration: none;
+}
+
+/* Para esconder un paso (lo usa el JavaScript) */
+.oculto {
+    display: none;
+}
+
+
+/* ---------- CELULAR / TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .sesion {
+        grid-template-columns: 1fr;
+    }
+
+    .sesion-marca {
+        padding: 28px 24px 32px;
+        gap: 18px;
+    }
+
+    .sesion-titulo {
+        font-size: 34px;
+        margin-bottom: 0;
+    }
+
+    /* En pantallas chicas solo queda el logo y el titulo */
+    .sesion-texto,
+    .sesion-lista,
+    .sesion-pasos,
+    .sesion-latido,
+    .sesion-pie {
+        display: none;
+    }
+
+    .sesion-lado {
+        padding: 28px 16px 48px;
+    }
+
+    .sesion-tarjeta {
+        padding: 32px 24px;
+    }
+}
+
+
+/* Si la persona prefiere menos movimiento, no se anima nada */
+@media (prefers-reduced-motion: reduce) {
+
+    .sesion-tarjeta {
+        animation: none;
+    }
+
+    .sesion-latido path {
+        animation: none;
+        stroke-dashoffset: 0;
+    }
+}
